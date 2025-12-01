@@ -24,9 +24,7 @@ def generate_qr(request):
                 media_url += '/'
             qr_url = media_url + file_name
 
-            # Optional: verify file saved (helps debug)
             if not os.path.exists(file_path):
-                # Logging or raise — here we render an error message
                 return render(request, 'Download_Qr.html', {
                     'res': res_name,
                     'qr_url': '',
