@@ -23,5 +23,5 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('Qr' , views.generate_qr , name="generate_qr")
+    path('' , views.generate_qr , name="generate_qr")
 ]+static(settings.MEDIA_URL , document_root=settings.MEDIA_ROOT)
